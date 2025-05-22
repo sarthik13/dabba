@@ -3,7 +3,7 @@
     <h2 class="login-title">Login</h2>
 
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-      <mat-form-field appearance="fill" class="full-width">
+      <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" type="email" required>
         <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
@@ -14,7 +14,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="fill" class="full-width">
+      <mat-form-field appearance="outline" class="full-width">
         <mat-label>Password</mat-label>
         <input matInput formControlName="password" type="password" required>
         <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
